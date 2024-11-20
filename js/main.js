@@ -332,7 +332,7 @@ function flipNextCardInTableau(originalParent, originalColumnIndex) {
 
     if (nextCard.rank && nextCard.suit) {
       const nextCardElement = originalParent.querySelector(".card:last-child");
-      nextCardElement.src = `Images/DeckCards/${nextCard.rank}_of_${nextCard.suit}.png`;
+      nextCardElement.src = `DeckCards/${nextCard.rank}_of_${nextCard.suit}.png`;
       nextCardElement.alt = `${nextCard.rank} of ${nextCard.suit}`;
       nextCardElement.draggable = true;
       nextCard.faceUp = true; // Set the faceUp property to true
@@ -678,7 +678,7 @@ function updateUI(tableau, stock) {
       cardElement.style.top = `${cardIndex * 20}px`;
 
       if (cardFace === "up") {
-        cardElement.src = `Images/DeckCards/${card.rank}_of_${card.suit}.png`;
+        cardElement.src = `DeckCards/${card.rank}_of_${card.suit}.png`;
         cardElement.alt = `${card.rank} of ${card.suit}`;
 
         // Add data attributes for validation
@@ -711,7 +711,7 @@ function updateWastePile() {
     const cardElement = document.createElement("img");
     cardElement.id = `waste-card-${index}`;
     cardElement.className = "card card-small";
-    cardElement.src = `Images/DeckCards/${card.rank}_of_${card.suit}.png`;
+    cardElement.src = `DeckCards/${card.rank}_of_${card.suit}.png`;
     cardElement.alt = `${card.rank} of ${card.suit}`;
     cardElement.draggable = true;
 
@@ -749,7 +749,7 @@ function updateFoundationPiles() {
       const cardElement = document.createElement("img");
       cardElement.id = `foundation-card-${elementId}-${index}`;
       cardElement.className = "card card-small";
-      cardElement.src = `Images/DeckCards/${card.rank}_of_${card.suit}.png`;
+      cardElement.src = `DeckCards/${card.rank}_of_${card.suit}.png`;
       cardElement.alt = `${card.rank} of ${card.suit}`;
       cardElement.draggable = true;
 
